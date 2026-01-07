@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Orlando Depablos - Full Stack Developer</title>
+    <meta
+        content="Orlando Depablos is a Full Stack Developer specializing in WordPress and Magento 2 with 10+ years of experience."
+        name="description" />
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&amp;family=Space+Grotesk:wght@500;700&amp;display=swap"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons+Round" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        // Original colors (primary, background-light, background-dark, surface-light, surface-dark) are removed
+                        // to ensure a complete override to the new scheme.
+                        // Defined new palette for Minimalist Circuitry with Neon Green accent
+                        'neon-green': '#5FFF5F', // The specified neon green accent color
+                        'base-white': '#FFFFFF', // Clean white for all backgrounds and containers
+                        'dark-text': '#1F2937',  // Darker text for contrast on white
+                        'light-text': '#4B5563', // Lighter text for secondary info
+                        'subtle-gray': '#E5E7EB', // Very light gray for desaturated elements
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Space Grotesk', 'sans-serif'],
+                    },
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                        'xl': "1rem",
+                        '2xl': "1.5rem",
+                    },
+                },
+            },
+        };
+    </script>
+    <script>
+        // Simple dark mode toggle script
+        function toggleDarkMode() {
+            document.documentElement.classList.toggle('dark');
+            localStorage.setItem('theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light');
+        }
+        // Initialize theme - Dark mode is removed for this "YOLO" exploration, as the request is explicitly "clean white" base.
+        // The toggle button will still be present but will not change to a dark theme.
+        document.documentElement.classList.remove('dark'); // Force light mode
+        localStorage.setItem('theme', 'light');
+    </script>
+</head>
+
+<body class="bg-base-white text-dark-text font-sans transition-colors duration-300 min-h-screen flex flex-col">
+    <nav
+        class="sticky top-0 z-50 backdrop-blur-md bg-base-white/70 border-b border-subtle-gray transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16 items-center">
+                <div class="flex-shrink-0 flex items-center gap-2">
+                    <div
+                        class="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center text-dark-text font-bold font-display">
+                        OD
+                    </div>
+                    <span class="font-display font-bold text-xl tracking-tight text-dark-text">Orlando Depablos</span>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a class="text-light-text hover:text-neon-green transition-colors text-sm font-medium"
+                        href="/">Home</a>
+                    <!-- <a class="text-neon-green font-semibold text-sm" href="#">About</a> -->
+                    <!-- <a class="text-light-text hover:text-neon-green transition-colors text-sm font-medium"
+                        href="#">Projects</a> -->
+                    <!-- <a class="text-light-text hover:text-neon-green transition-colors text-sm font-medium"
+                        href="#">Articles</a> -->
+                    <a class="bg-neon-green hover:bg-[#4DD34D] text-dark-text px-4 py-2 rounded-lg text-sm font-medium transition-colors shadow-lg shadow-neon-green/20"
+                        href="mailto:orlando@asmodeusediciones.com">Contact Me</a>
+                    <!-- <button class="p-2 rounded-full hover:bg-subtle-gray transition-colors text-light-text"
+                        onclick="toggleDarkMode()">
+                        <span class="material-icons-round text-xl dark:hidden">dark_mode</span>
+                        <span class="material-icons-round text-xl hidden dark:block">light_mode</span>
+                    </button> -->
+                </div>
+                <div class="md:hidden flex items-center">
+                    <!-- <button class="p-2 mr-2 rounded-full hover:bg-subtle-gray transition-colors text-light-text"
+                        onclick="toggleDarkMode()">
+                        <span class="material-icons-round text-xl dark:hidden">dark_mode</span>
+                        <span class="material-icons-round text-xl hidden dark:block">light_mode</span>
+                    </button> -->
+                    <button class="text-light-text hover:text-dark-text">
+                        <span class="material-icons-round text-2xl">menu</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <main class="flex-grow">
+        <section class="relative pt-12 pb-20 lg:pt-24 lg:pb-28 overflow-hidden">
+            <div
+                class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-neon-green/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div
+                class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-neon-green/10 rounded-full blur-3xl pointer-events-none">
+            </div>
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+                    <div class="lg:col-span-7 order-2 lg:order-1">
+                        <div
+                            class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neon-green/10 border border-neon-green/30 mb-6">
+                            <span class="flex h-2 w-2 relative">
+                                <span
+                                    class="animate-ping absolute inline-flex h-full w-full rounded-full bg-neon-green opacity-75"></span>
+                                <span class="relative inline-flex rounded-full h-2 w-2 bg-neon-green"></span>
+                            </span>
+                            <span class="text-xs font-semibold text-neon-green uppercase tracking-wide">OD</span>
+                        </div>
+                        <h1 class="text-4xl lg:text-6xl font-display font-bold text-dark-text leading-tight mb-6">
+                            Building Robust <br />
+                            <span
+                                class="text-transparent bg-clip-text bg-gradient-to-r from-neon-green to-[#4DD34D]">E-Commerce
+                                Systems</span>
+                        </h1>
+                        <div class="prose prose-lg text-light-text mb-8 max-w-2xl">
+                            <p>
+                                I am a <strong>Full Stack Developer</strong> and <strong>Technical Lead</strong> with
+                                over 10 years of experience turning complex business requirements into seamless digital
+                                experiences.
+                            </p>
+                            <p>
+                                Specializing in <strong>WordPress</strong> and <strong>Magento 2</strong>, I focus on
+                                high-performance architectures, system integrations, and automating critical business
+                                processes.
+                            </p>
+                        </div>
+                        <div class="flex flex-wrap gap-4">
+                            <!-- <a class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg text-dark-text bg-neon-green hover:bg-[#4DD34D] transition-all shadow-lg shadow-neon-green/30"
+                                href="#">
+                                <span class="material-icons-round mr-2">download</span>
+                                Download CV
+                            </a>
+                            <a class="inline-flex items-center justify-center px-6 py-3 border border-subtle-gray text-base font-medium rounded-lg text-light-text bg-base-white hover:bg-subtle-gray transition-all"
+                                href="#">
+                                View Portfolio
+                            </a> -->
+                        </div>
+                        <div class="mt-12 pt-8 border-t border-subtle-gray grid grid-cols-3 gap-8">
+                            <div>
+                                <p class="text-3xl font-display font-bold text-dark-text">10+</p>
+                                <p class="text-sm text-light-text mt-1">Years Experience</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-display font-bold text-dark-text">30+</p>
+                                <p class="text-sm text-light-text mt-1">Enterprise Projects</p>
+                            </div>
+                            <div>
+                                <p class="text-3xl font-display font-bold text-dark-text">100%</p>
+                                <p class="text-sm text-light-text mt-1">Company Satisfaction</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 order-1 lg:order-2 flex justify-center lg:justify-end">
+                        <div class="relative w-full max-w-md">
+                            <div
+                                class="absolute inset-0 bg-gradient-to-tr from-neon-green to-[#4DD34D] rounded-2xl transform rotate-3 scale-105 opacity-20 blur-lg">
+                            </div>
+                            <div
+                                class="relative bg-base-white p-2 rounded-2xl shadow-2xl ring-1 ring-subtle-gray overflow-hidden">
+                                <img alt="Portrait of a professional full stack developer looking confident"
+                                    class="w-full h-auto rounded-xl grayscale hover:grayscale-0 transition-all duration-500 object-cover aspect-[4/5]"
+                                    src="/assets/img/me.png" />
+                                <div
+                                    class="absolute bottom-6 left-6 right-6 bg-base-white/90 backdrop-blur-sm p-4 rounded-xl border border-subtle-gray shadow-lg">
+                                    <div class="flex items-center justify-between">
+                                        <div>
+                                            <p class="text-xs text-light-text uppercase tracking-wider font-semibold">
+                                                Current Focus</p>
+                                            <p class="text-sm font-bold text-dark-text mt-0.5">App Development &
+                                                Atomation
+                                            </p>
+                                        </div>
+                                        <div
+                                            class="h-8 w-8 rounded-full bg-neon-green/10 flex items-center justify-center text-neon-green">
+                                            <span class="material-icons-round text-lg">trending_up</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 bg-base-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center max-w-3xl mx-auto mb-16">
+                    <h2 class="text-3xl font-display font-bold text-dark-text mb-4">Technical Expertise</h2>
+                    <p class="text-light-text text-lg">
+                        I deliver comprehensive solutions that cover the entire e-commerce lifecycle, from backend logic
+                        to frontend finesse.
+                    </p>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div
+                        class="group p-8 rounded-2xl bg-base-white border border-subtle-gray hover:border-neon-green transition-all hover:shadow-xl hover:shadow-neon-green/10">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-subtle-gray text-light-text flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-neon-green/10 group-hover:text-neon-green">
+                            <span class="material-icons-round text-3xl">shopping_cart</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text mb-3">Magento 2 Specialist</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Custom module development, theme integration, and performance tuning for high-traffic
+                            Magento stores.
+                        </p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-2xl bg-base-white border border-subtle-gray hover:border-neon-green transition-all hover:shadow-xl hover:shadow-neon-green/10">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-subtle-gray text-light-text flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-neon-green/10 group-hover:text-neon-green">
+                            <span class="material-icons-round text-3xl">web</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text mb-3">WordPress &amp; WooCommerce</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Scalable WP architectures, custom plugin development, and headless CMS implementations.
+                        </p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-2xl bg-base-white border border-subtle-gray hover:border-neon-green transition-all hover:shadow-xl hover:shadow-neon-green/10">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-subtle-gray text-light-text flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-neon-green/10 group-hover:text-neon-green">
+                            <span class="material-icons-round text-3xl">hub</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text mb-3">System Integration (ERP/CRM)</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Seamlessly connecting e-commerce platforms with SAP, Salesforce, Eloqua, Close, and
+                            custom APIs.
+                        </p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-2xl bg-base-white border border-subtle-gray hover:border-neon-green transition-all hover:shadow-xl hover:shadow-neon-green/10">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-subtle-gray text-light-text flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-neon-green/10 group-hover:text-neon-green">
+                            <span class="material-icons-round text-3xl">payments</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text mb-3">Payment Integration</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Implementing complex checkout flows, recurring billing, and multi-currency payment gateway
+                            integrations.
+                        </p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-2xl bg-base-white border border-subtle-gray hover:border-neon-green transition-all hover:shadow-xl hover:shadow-neon-green/10">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-subtle-gray text-light-text flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-neon-green/10 group-hover:text-neon-green">
+                            <span class="material-icons-round text-3xl">auto_fix_high</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text mb-3">Process Automation</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Automating inventory management, order processing, and customer communication workflows.
+                        </p>
+                    </div>
+                    <div
+                        class="group p-8 rounded-2xl bg-base-white border border-subtle-gray hover:border-neon-green transition-all hover:shadow-xl hover:shadow-neon-green/10">
+                        <div
+                            class="w-14 h-14 rounded-xl bg-subtle-gray text-light-text flex items-center justify-center mb-6 group-hover:scale-110 transition-transform group-hover:bg-neon-green/10 group-hover:text-neon-green">
+                            <span class="material-icons-round text-3xl">code</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-dark-text mb-3">Custom Development</h3>
+                        <p class="text-light-text leading-relaxed">
+                            Building bespoke PHP applications and App solutions with Rust when off-the-shelf software
+                            isn't
+                            enough.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-12 border-y border-subtle-gray bg-base-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <p class="text-center text-sm font-semibold text-light-text uppercase tracking-widest mb-8">Technologies
+                    I Master</p>
+                <div
+                    class="flex flex-wrap justify-center gap-8 md:gap-12 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
+                    <div class="flex items-center gap-2 text-xl font-bold text-dark-text">
+                        <span class="material-icons-round text-neon-green">layers</span> Magento 2
+                    </div>
+                    <div class="flex items-center gap-2 text-xl font-bold text-dark-text">
+                        <span class="material-icons-round text-neon-green">article</span> WordPress
+                    </div>
+                    <div class="flex items-center gap-2 text-xl font-bold text-dark-text">
+                        <span class="material-icons-round text-neon-green">php</span> PHP/Rust
+                    </div>
+                    <div class="flex items-center gap-2 text-xl font-bold text-dark-text">
+                        <span class="material-icons-round text-neon-green">data_object</span> React/Dioxus
+                    </div>
+                    <div class="flex items-center gap-2 text-xl font-bold text-dark-text">
+                        <span class="material-icons-round text-neon-green">storage</span> MySQL/PostgreSQL
+                    </div>
+                    <div class="flex items-center gap-2 text-xl font-bold text-dark-text">
+                        <span class="material-icons-round text-neon-green">cloud</span> AWS/Azure
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="py-20 relative overflow-hidden">
+            <div class="absolute inset-0 bg-neon-green/5"></div>
+            <div class="max-w-4xl mx-auto px-4 text-center relative z-10">
+                <h2 class="text-3xl md:text-4xl font-display font-bold text-dark-text mb-6">Ready to scale your
+                    application idea?</h2>
+                <p class="text-lg text-light-text mb-8">
+                    Whether you need a full system overhaul or a specific integration, I bring the technical leadership
+                    required to succeed.
+                </p>
+                <a href="mailto:orlando@asmodeusediciones.com" class="text-neon-green font-semibold mb-6">
+                    <button
+                        class="bg-neon-green hover:bg-[#4DD34D] text-dark-text font-semibold py-3 px-8 rounded-lg shadow-lg shadow-neon-green/30 transition-transform hover:-translate-y-1">
+                        Let's Discuss Your Project
+                    </button>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer class="bg-base-white border-t border-subtle-gray py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center gap-2 mb-4">
+                        <div
+                            class="w-8 h-8 bg-neon-green rounded-lg flex items-center justify-center text-dark-text font-bold font-display">
+                            OD
+                        </div>
+                        <span class="font-display font-bold text-xl text-dark-text">Orlando Depablos</span>
+                    </div>
+                    <p class="text-light-text max-w-sm">
+                        Full Stack Developer &amp; Technical Lead creating high-performance digital commerce
+                        experiences.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-dark-text mb-4">Services</h4>
+                    <ul class="space-y-2 text-sm text-light-text">
+                        <li>Magento Development</li>
+                        <li>WordPress Solutions</li>
+                        <li>API Integration</li>
+                        <li>Technical Consulting</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-dark-text mb-4">Connect</h4>
+                    <div class="flex space-x-4">
+                        <a class="text-light-text hover:text-neon-green transition-colors"
+                            href="https://github.com/orlandoDe">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-light-text hover:text-neon-green transition-colors"
+                            href="https://www.linkedin.com/in/orlando-depablos-01a22b66/">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path clip-rule="evenodd"
+                                    d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"
+                                    fill-rule="evenodd"></path>
+                            </svg>
+                        </a>
+                        <a class="text-light-text hover:text-neon-green transition-colors" href="https://x.com/mc_bosc">
+                            <span class="sr-only">X</span>
+                            <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                <path
+                                    d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z">
+                                </path>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-subtle-gray pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-sm text-light-text">© 2026 Orlando Depablos. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0 text-sm text-light-text">
+                    <!-- <a class="hover:text-neon-green" href="#">Privacy Policy</a> -->
+                    <!-- <a class="hover:text-neon-green" href="#">Terms of Service</a> -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+
+</html>
